@@ -1,13 +1,11 @@
 # code your #position_taken? method here!
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-def position_taken?(array,index)
-  if array[index] == " "
-    false
-  elsif array[index] == "" || array[index] == nil
-    false
-  else true
-    #nil == false
-  #else array[index] == "X" || array[index] == "O"
-
-end
+def position_taken(player_move, player = "X")
+  index = player_move.to_i-1
+  if board[index] == "X" || board[index] == "O"
+    puts "That space is already taken.  Please try again"
+  else
+    board[index] = "#{player}"
+  end
+  puts "#{board}"
 end
