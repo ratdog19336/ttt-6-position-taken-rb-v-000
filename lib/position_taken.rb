@@ -6,6 +6,7 @@ def position_taken?( board, index, player = "X")
     return false
   else
     board[index] = "#{player}"
+    return true
   end
   puts "#{board}"
 end
