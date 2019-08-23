@@ -1,7 +1,7 @@
 # code your #position_taken? method here!
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 def position_taken?( board, index, player = "X")
-  if board[index] == "X" || board[index] == "O"
+  if board[index] == "X" || board[index] == "O" || board[index] == " "
     puts "That space is already taken.  Please try again"
   else
     board[index] = "#{player}"
